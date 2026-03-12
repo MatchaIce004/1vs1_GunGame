@@ -12,4 +12,17 @@ Unityで作成した2D 1vs1シューティングゲームの敵AIです。
 
 ## AI構造
 
-State → BehaviourTree → CandidateActions → WeightedSelection → Actuator
+- AIStateJudge  
+  戦闘状況を評価し、AIの状態を決定
+
+- AIMoveBehaviourTree / AIShootBehaviourTree  
+  状況に応じた行動候補を生成
+
+- AIMoveActionSelector / AIShootActionSelector  
+  重み付きランダムで行動を選択
+
+- AIMoveActuator / AIShootActuator  
+  実際の移動や射撃を実行
+
+- AIEnemyAIController  
+  AI全体の処理を管理
